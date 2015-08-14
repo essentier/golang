@@ -20,4 +20,6 @@ ENV GOPATH /go
 ENV PATH /go/bin:$PATH
 WORKDIR /go
 
+RUN go get github.com/tools/godep
 COPY go-wrapper /usr/local/bin/
+RUN chmod +x /usr/local/bin/go-wrapper
