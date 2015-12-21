@@ -78,7 +78,7 @@ case "$cmd" in
 		;;
 		
 	install)
-		execCommand=( go install -v "$@" )
+		execCommand=( godep go install -v "$@" )
 		if [ "$goDir" ]; then execCommand+=( "$goDir" ); fi
 		set -x; exec "${execCommand[@]}"
 		;;
